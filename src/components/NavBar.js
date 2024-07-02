@@ -2,13 +2,9 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Col } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
-
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -35,9 +31,9 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-          <Col size={14} sm={25}>
-            <img src={logo} alt="Chris Shaji" />
-          </Col>
+            <Col size={14} sm={25}>
+              <img src={logo} alt="Chris Shaji" />
+            </Col>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -49,18 +45,15 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-
-                <a href="https://www.linkedin.com/in/chrisshaji/" target="_blank">
-                  <img  rel="noopener noreferrer" src={navIcon1} alt="https://www.linkedin.com/in/chrisshaji/"/>
+                <a href="https://www.linkedin.com/in/chrisshaji/" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon1} alt="LinkedIn" />
                 </a>
               </div>
-              <HashLink to='#connect'>
-              <a href="https://drive.google.com/file/d/1HTI2-Xasf0YnujmjeZIR0ftCk--Jj2GY/view" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1HTI2-Xasf0YnujmjeZIR0ftCk--Jj2GY/view" target="_blank" rel="noreferrer">
                 <button className="vvd">
                   <span>Download Resume</span>
                 </button>
               </a>
-              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
