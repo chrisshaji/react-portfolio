@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Col } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
 import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
@@ -48,6 +49,9 @@ export const NavBar = () => {
                 <a href="https://www.linkedin.com/in/chrisshaji/" target="_blank" rel="noopener noreferrer">
                   <img src={navIcon1} alt="LinkedIn" />
                 </a>
+                <a href="https://github.com/chrisshaji" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon2} alt="GitHub" />
+               </a>
               </div>
               <a href="https://drive.google.com/file/d/1HTI2-Xasf0YnujmjeZIR0ftCk--Jj2GY/view" target="_blank" rel="noreferrer">
                 <button className="vvd">
