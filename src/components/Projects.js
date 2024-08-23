@@ -10,7 +10,7 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 
   const projects = [
-    {
+    { 
       title: "Rubik's Cube Solver",
       description: "A machine that solves Rubik's cubes in under 5 seconds",
       imgUrl: projImg1,
