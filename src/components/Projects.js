@@ -17,17 +17,17 @@ export const Projects = () => {
     },
     {
       title: "Children's Museum Exhibit",
-      description: "Design & Development",
+      description: "Interactive and Engaging exhibit for children",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Autonomous RC Car",
+      description: "Currently designing an RC car from scratch with LiDAR capabilities",
       imgUrl: projImg3,
     },
     {
-      title: "",
-      description: "Design & Development",
+      title: "Kitchen Organizer",
+      description: "Organization system that declutters your kitchen",
       imgUrl: projImg1,
     },
   ];
