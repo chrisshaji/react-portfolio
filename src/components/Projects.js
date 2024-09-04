@@ -1,24 +1,26 @@
 import { Container, Row, Col, } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
+import projImg1 from "../assets/img/project-img1.jpeg";
 import projImg2 from "../assets/img/project-img2.jpg";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/project-img3.jpg";
+import projImg4 from "../assets/img/project-img4.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
-
   const projects = [
     { 
       title: "Rubik's Cube Solver",
       description: "A machine that solves Rubik's cubes in under 5 seconds",
       imgUrl: projImg1,
+      linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
     },
     {
       title: "Children's Museum Exhibit",
       description: "Interactive and Engaging exhibit for children",
       imgUrl: projImg2,
+      linkUrl: "https://github.com/chrisshaji/Children-s-Mueseum",
     },
     {
       title: "Autonomous RC Car",
@@ -28,7 +30,7 @@ export const Projects = () => {
     {
       title: "Kitchen Organizer",
       description: "Organization system that declutters your kitchen",
-      imgUrl: projImg1,
+      imgUrl: projImg4,
     },
   ];
 
@@ -41,16 +43,13 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>                </p>
                 <Row>
-                  {projects.map((project, index) => {
-                    return (
-                      <ProjectCard
-                        key={index}
-                        {...project}
-                      />
-                    )
-                  })}
+                  {projects.map((project, index) => (
+                    <ProjectCard
+                      key={index}
+                      {...project}
+                    />
+                  ))}
                 </Row>
               </div>}
             </TrackVisibility>
@@ -59,5 +58,5 @@ export const Projects = () => {
       </Container>
       <img className="background-image-right" src={colorSharp2} alt={""}></img>
     </section>
-  )
+  );
 }
