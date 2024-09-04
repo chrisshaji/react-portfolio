@@ -53,7 +53,7 @@ export const NavBar = () => {
                   <img src={navIcon2} alt="GitHub" />
                </a>
               </div>
-              <a href="https://drive.google.com/file/d/1uJ6ut1KXQ5BnHzdlMu-r6-d_SMfZ_d-s/view?usp=sharing" target="_blank" rel="noreferrer">
+              <a href="https://drive.google.com/file/d/16hnwBvTZKi0bNgcTXMuV1NIQis51kxvI/view?usp=sharing" target="_blank" rel="noreferrer">
                 <button className="vvd">
                   <span>Download Resume</span>
                 </button>
