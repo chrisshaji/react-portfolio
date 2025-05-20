@@ -34,6 +34,18 @@ export const Projects = () => {
       imgUrl: projImg4,
       linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
     },
+    {
+      title: "ASME Go Kart",
+      description: "A drivable Go-Kart made from scratch",
+      imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
+    },
+    {
+      title: "Scissor Lift",
+      description: "Class project for MEEN 360",
+      imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
+    },
   ];
 
   return (
