@@ -12,7 +12,7 @@ export const Projects = () => {
   const projects = [
     { 
       title: "Rubik's Cube Solver",
-      description: "A machine that solves Rubik's cubes in under 5 seconds",
+      description: "A machine that solves Rubik's cubes",
       imgUrl: projImg1,
       linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
     },
@@ -26,11 +26,13 @@ export const Projects = () => {
       title: "Autonomous RC Car",
       description: "Currently designing an RC car from scratch with LiDAR capabilities",
       imgUrl: projImg3,
+      linkUrl: "https://github.com/chrisshaji/Autonomous-RC-Car"
     },
     {
       title: "Kitchen Organizer",
       description: "Organization system that declutters your kitchen",
       imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
     },
   ];
 
