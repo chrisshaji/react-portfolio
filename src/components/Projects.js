@@ -18,10 +18,10 @@ export const Projects = () => {
       linkUrl: "https://github.com/chrisshaji/Autonomous-RC-Car"
     },
     {
-      title: "Children's Museum Exhibit",
-      description: "Interactive and Engaging exhibit for children",
-      imgUrl: projImg2,
-      linkUrl: "https://github.com/chrisshaji/Children-s-Mueseum",
+      title: "ASME Go Kart",
+      description: "A drivable Go-Kart made from scratch",
+      imgUrl: projImg5,
+      linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
     },
     {
       title: "Rubik's Cube Solver",
@@ -30,23 +30,28 @@ export const Projects = () => {
       linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
     },
     {
-      title: "Kitchen Organizer",
-      description: "Organization system that declutters your kitchen",
-      imgUrl: projImg4,
-      linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
+      title: "Children's Museum Exhibit",
+      description: "Interactive and Engaging exhibit for children",
+      imgUrl: projImg2,
+      linkUrl: "https://github.com/chrisshaji/Children-s-Mueseum",
     },
-
     {
-      title: "ASME Go Kart",
-      description: "A drivable Go-Kart made from scratch",
-      imgUrl: projImg5,
-      linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
+      title: "Strandbeest",
+      description: "Project for T.U.R.T.L.E Robotics Organization",
+      imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/Strandbeest"
     },
     {
       title: "Scissor Lift",
       description: "Class project for MEEN 360",
       imgUrl: projImg4,
       linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
+    },
+    {
+      title: "Kitchen Organizer",
+      description: "Organization system that declutters your kitchen",
+      imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
     },
   ];
 
