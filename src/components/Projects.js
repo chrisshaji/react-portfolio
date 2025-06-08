@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.jpeg";
 import projImg2 from "../assets/img/project-img2.jpg";
 import projImg3 from "../assets/img/project-img3.jpg";
 import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,10 +12,10 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   const projects = [
     { 
-      title: "Rubik's Cube Solver",
-      description: "A machine that solves Rubik's cubes",
-      imgUrl: projImg1,
-      linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
+      title: "Autonomous RC Car",
+      description: "Currently designing an RC car from scratch with LiDAR capabilities",
+      imgUrl: projImg3,
+      linkUrl: "https://github.com/chrisshaji/Autonomous-RC-Car"
     },
     {
       title: "Children's Museum Exhibit",
@@ -23,10 +24,10 @@ export const Projects = () => {
       linkUrl: "https://github.com/chrisshaji/Children-s-Mueseum",
     },
     {
-      title: "Autonomous RC Car",
-      description: "Currently designing an RC car from scratch with LiDAR capabilities",
-      imgUrl: projImg3,
-      linkUrl: "https://github.com/chrisshaji/Autonomous-RC-Car"
+      title: "Rubik's Cube Solver",
+      description: "A machine that solves Rubik's cubes",
+      imgUrl: projImg1,
+      linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
     },
     {
       title: "Kitchen Organizer",
@@ -35,18 +36,18 @@ export const Projects = () => {
       linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
     },
 
-    // {
-    //   title: "ASME Go Kart",
-    //   description: "A drivable Go-Kart made from scratch",
-    //   imgUrl: projImg4,
-    //   linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
-    // },
-    // {
-    //   title: "Scissor Lift",
-    //   description: "Class project for MEEN 360",
-    //   imgUrl: projImg4,
-    //   linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
-    // },
+    {
+      title: "ASME Go Kart",
+      description: "A drivable Go-Kart made from scratch",
+      imgUrl: projImg5,
+      linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
+    },
+    {
+      title: "Scissor Lift",
+      description: "Class project for MEEN 360",
+      imgUrl: projImg4,
+      linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
+    },
   ];
 
   return (
