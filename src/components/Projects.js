@@ -3,8 +3,11 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.jpeg";
 import projImg2 from "../assets/img/project-img2.jpg";
 import projImg3 from "../assets/img/project-img3.jpg";
-import projImg4 from "../assets/img/project-img4.png";
+import projImg4 from "../assets/img/project-img4.jpeg";
 import projImg5 from "../assets/img/project-img5.jpeg";
+import projImg6 from "../assets/img/project-img6.jpeg";
+import projImg7 from "../assets/img/project-img7.jpeg";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -38,13 +41,13 @@ export const Projects = () => {
     {
       title: "Strandbeest",
       description: "Project for T.U.R.T.L.E Robotics Organization",
-      imgUrl: projImg4,
+      imgUrl: projImg6,
       linkUrl: "https://github.com/chrisshaji/Strandbeest"
     },
     {
       title: "Scissor Lift",
       description: "Class project for MEEN 360",
-      imgUrl: projImg4,
+      imgUrl: projImg7,
       linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
     },
     {
