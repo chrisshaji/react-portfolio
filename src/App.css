@@ -427,6 +427,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+/************ Project pages ************/
+.project-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.project-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.project-page ul {
+  padding-left: 1.5rem;
+}
+
+.project-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.responsive-video {
+  width: 30%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
 
 /************ Footer Css ************/
 .footer {

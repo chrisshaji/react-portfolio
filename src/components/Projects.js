@@ -14,50 +14,50 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
   const projects = [
-    { 
+    {
       title: "Autonomous RC Car",
       description: "Currently designing an RC car from scratch with LiDAR capabilities",
       imgUrl: projImg3,
-      linkUrl: "https://github.com/chrisshaji/Autonomous-RC-Car"
+      linkUrl: "/projects/autonomous-rc-car"
     },
     {
       title: "ASME Go Kart",
       description: "A drivable Go-Kart made from scratch",
       imgUrl: projImg5,
-      linkUrl: "https://github.com/chrisshaji/ASME-Go-Kart-2024-25"
+      linkUrl: "/projects/asme-go-kart"
     },
     {
       title: "Rubik's Cube Solver",
       description: "A machine that solves Rubik's cubes",
       imgUrl: projImg1,
-      linkUrl: "https://github.com/chrisshaji/Rubik-s-cube-Solver",
+      linkUrl: "/projects/rubiks-cube-solver"
     },
     {
       title: "Children's Museum Exhibit",
       description: "Interactive and Engaging exhibit for children",
       imgUrl: projImg2,
-      linkUrl: "https://github.com/chrisshaji/Children-s-Mueseum",
+      linkUrl: "/projects/childrens-museum"
     },
     {
       title: "Strandbeest",
       description: "Project for T.U.R.T.L.E Robotics Organization",
       imgUrl: projImg6,
-      linkUrl: "https://github.com/chrisshaji/Strandbeest"
+      linkUrl: "/projects/strandbeest"
     },
     {
       title: "Scissor Lift",
       description: "Class project for MEEN 360",
       imgUrl: projImg7,
-      linkUrl: "https://github.com/chrisshaji/Scissor-Lift"
+      linkUrl: "/projects/scissor-lift"
     },
     {
       title: "Kitchen Organizer",
       description: "Organization system that declutters your kitchen",
       imgUrl: projImg4,
-      linkUrl: "https://github.com/chrisshaji/Kitchen-Organizer"
+      linkUrl: "/projects/kitchen-organizer"
     },
   ];
-
+  
   return (
     <section className="project" id="projects">
       <Container>

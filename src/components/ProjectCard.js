@@ -1,10 +1,10 @@
-import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ProjectCard = ({ title, description, imgUrl, linkUrl }) => {
   return (
-    <Col size={12} sm={6} md={6}>
-      <a href={linkUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Col sm={6} md={4}>
+      <Link to={linkUrl} style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="proj-imgbx">
           <img src={imgUrl} alt={title} />
           <div className="proj-txtx">
@@ -12,7 +12,7 @@ export const ProjectCard = ({ title, description, imgUrl, linkUrl }) => {
             <span>{description}</span>
           </div>
         </div>
-      </a>
+      </Link>
     </Col>
   );
-}
+};
