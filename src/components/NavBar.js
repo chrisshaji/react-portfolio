@@ -4,6 +4,7 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -47,7 +48,14 @@ export const NavBar = () => {
           >
             Home
           </Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+          <Nav.Link
+            as={HashLink}
+            to="/#projects"
+            className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+            onClick={() => onUpdateActiveLink('projects')}>
+            Projects
+          </Nav.Link>
+
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -61,7 +69,7 @@ export const NavBar = () => {
             <a href="https://drive.google.com/file/d/1ctwYw0HfeZR3LfMzd1HphRHJvhayYdMJ/view?usp=sharing" target="_blank" rel="noreferrer">
               <button className="vvd">
                 <span>Download Resume</span>
-              </button>
+              </button> 
             </a>
           </span>
         </Navbar.Collapse>
