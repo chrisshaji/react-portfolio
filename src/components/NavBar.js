@@ -3,8 +3,7 @@ import { Navbar, Nav, Container, Col } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
-// ❌ REMOVE THIS LINE:
-// import { BrowserRouter as Router } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -28,7 +27,6 @@ export const NavBar = () => {
   };
 
   return (
-    // ✅ NO <Router> here
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
@@ -41,7 +39,14 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="/"
+            className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+            onClick={() => onUpdateActiveLink('home')}
+          >
+            Home
+          </Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">

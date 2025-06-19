@@ -15,16 +15,16 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   const projects = [
     {
-      title: "Autonomous RC Car",
-      description: "Currently designing an RC car from scratch with LiDAR capabilities",
-      imgUrl: projImg3,
-      linkUrl: "/projects/autonomous-rc-car"
-    },
-    {
       title: "ASME Go Kart",
       description: "A drivable Go-Kart made from scratch",
       imgUrl: projImg5,
       linkUrl: "/projects/asme-go-kart"
+    },
+    {
+      title: "Autonomous RC Car",
+      description: "Currently designing an RC car from scratch with LiDAR capabilities",
+      imgUrl: projImg3,
+      linkUrl: "/projects/autonomous-rc-car"
     },
     {
       title: "Rubik's Cube Solver",
