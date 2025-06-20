@@ -1,7 +1,19 @@
 import React from 'react';
-// import images like: import image1 from '../assets/...';
+import basefail from "../assets/proj-img/basefail.jpg";
+import baseplateprint from "../assets/proj-img/baseplateprint.jpg";
+import breadboarding from "../assets/proj-img/breadboarding.png";
+import motorinarch from "../assets/proj-img/motorinarch.jpg";
+import rubixcad from "../assets/proj-img/rubixcad.png";
 
 function RubiksCubeSolver() {
+  const designImages = [
+    { caption: "Breadboarding the motors", src: breadboarding },
+    { caption: "Motor screwed into the arch", src: motorinarch },
+    { caption: "Assembly rendered in SolidWorks", src: rubixcad }];
+    const pimages = [
+    { caption: "Base Plate Print ~24 hour", src: baseplateprint },
+    { caption: "Failed due to poor adhesion :(", src: basefail }];
+
   return (
     <div>
       {/* Hero Section */}
@@ -9,7 +21,7 @@ function RubiksCubeSolver() {
         style={{
           position: 'relative',
           height: '60vh',
-          backgroundImage: `url(/placeholder-hero.jpg)`, // Replace later
+          backgroundImage: `url(/placeholder-hero.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -18,7 +30,7 @@ function RubiksCubeSolver() {
         <div
           style={{
             position: 'absolute',
-            bottom: '2rem',
+            bottom: '0.75rem',
             left: '2rem',
             color: 'white',
             textShadow: '0 2px 8px rgba(0,0,0,0.7)',
@@ -30,55 +42,57 @@ function RubiksCubeSolver() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div style={{ marginLeft: '5rem', marginRight: '5rem' }}>
         <h2 className="mt-5">Design Rationale</h2>
         <p>
-          The motor and cube connectors were the first pieces to be designed and fabricated. These pieces had to be toleranced perfectly — too loose and they'd slip, too tight and removal would be hard. After a lot of testing and printing, I arrived at the perfect dimensions for a smooth fit. Screw holes were added as a backup for wear and vibration.
+          The motor and cube connectors were the first pieces to be designed and fabricated. These pieces had to be toleranced perfectly 
+          — too loose and they'd slip, too tight and removal would be hard. After a lot of testing and printing, I arrived at the perfect 
+          dimensions for a smooth fit. Screw holes were added as a backup for wear and vibration.
         </p>
         <p>
-          The main design constraint was securely mounting each stepper motor to each cube face. The column pieces needed to support ~1 lb motors during high-speed movement. Caliper measurements and 8–10% tolerance were used, plus a honeycomb design for ventilation. Screw tabs were added for mounting.
+          The main design constraint was securely mounting each stepper motor to each cube face. The column pieces needed to support ~1 
+          lb motors during high-speed movement. Caliper measurements and 8–10% tolerance were used, plus a honeycomb design for ventilation.
+          Screw tabs were added for mounting.
         </p>
         <p>
-          For the base plate and arch, I minimized filament use by hollowing patterns. Originally I planned to use neodymium magnets for arch removal, but they weren’t strong enough — screws and nuts worked better. The base plate allowed the columns and bottom motor to screw directly into place.
+          For the base plate and arch, I minimized filament use by hollowing patterns. Originally I planned to use neodymium magnets for arch 
+          removal, but they weren’t strong enough — screws and nuts worked better. The base plate allowed the columns and bottom motor to screw
+          directly into place.
         </p>
 
-        {/* Design Images Row */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-end',
-            gap: '30px',
-            flexWrap: 'wrap',
-            marginTop: '2rem',
-          }}
-        >
-          {["Breadboarding the motors", "Motor screwed into the arch", "Assembly rendered in SolidWorks"].map((caption, i) => (
-            <div key={i} style={{ textAlign: 'center' }}>
-              <div
-                style={{
-                  height: '280px',
-                  width: '275px',
-                  backgroundColor: '#e0e0e0',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontStyle: 'italic',
-                  color: '#666',
-                }}
-              >
-                [Placeholder Image]
-              </div>
-              <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{caption}</p>
-            </div>
-          ))}
+            <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        gap: '30px',
+        flexWrap: 'wrap',
+        marginTop: '2rem',
+      }}
+    >
+      {designImages.map((item, i) => (
+        <div key={i} style={{ textAlign: 'center' }}>
+          <img
+            src={item.src}
+            alt={item.caption}
+            style={{
+              height: '350px',
+              width: 'auto',
+              objectFit: 'cover',
+              borderRadius: '12px',
+              display: 'block',
+              margin: '0 auto',
+            }}
+          />
+          <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
         </div>
+      ))}
+    </div>
 
         <h2 className="mt-5">Fabrication</h2>
         <p>
-          The enclosure, connectors, and motor holders were fully 3D printed on my Elegoo Neptune 3 Pro using PLA and sliced with Cura. The base plate took up the entire build volume and was the trickiest print. My first attempt failed due to poor tree support adhesion.
+          The enclosure, connectors, and motor holders were fully 3D printed on my Elegoo Neptune 3 Pro using PLA and sliced with Cura. The base 
+          plate took up the entire build volume and was the trickiest print. My first attempt failed due to poor tree support adhesion.
         </p>
 
         <h4>Print Settings:</h4>
@@ -91,37 +105,34 @@ function RubiksCubeSolver() {
 
         {/* Fabrication Images Row */}
         <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-end',
-            gap: '30px',
-            flexWrap: 'wrap',
-            marginTop: '2rem',
-          }}
-        >
-          {["Base Plate Print ~24 hours", "Failed due to poor adhesion :("]
-            .map((caption, i) => (
-              <div key={i} style={{ textAlign: 'center' }}>
-                <div
-                  style={{
-                    height: '400px',
-                    width: '300px',
-                    backgroundColor: '#e0e0e0',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontStyle: 'italic',
-                    color: '#666',
-                  }}
-                >
-                  [Placeholder Image]
-                </div>
-                <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{caption}</p>
-              </div>
-            ))}
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        gap: '30px',
+        flexWrap: 'wrap',
+        marginTop: '2rem',
+      }}
+    >
+      {pimages.map((item, i) => (
+        <div key={i} style={{ textAlign: 'center' }}>
+          <img
+            src={item.src}
+            alt={item.caption}
+            style={{
+              height: '350px',
+              width: 'auto',
+              objectFit: 'cover',
+              borderRadius: '12px',
+              display: 'block',
+              margin: '0 auto',
+            }}
+          />
+          <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
         </div>
+      ))}
+    </div>
+
       </div>
     </div>
   );

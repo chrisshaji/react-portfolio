@@ -40,13 +40,13 @@ function ASMEGoKart() {
         <div
           style={{
             position: 'absolute',
-            bottom: '2rem',    // ⬇ Push to bottom
+            bottom: '0.75rem',    // ⬇ Push to bottom
             left: '2rem',      // ⬅ Push to left
             color: 'white',
             textShadow: '0 2px 8px rgba(0,0,0,0.7)',
           }}
         >
-          <h1 style={{ fontSize: '3rem', margin: 0, fontWeight: 'bold' }}>
+          <h1 style={{ fontSize: '4rem', margin: 0, fontWeight: 'bold' }}>
             ASME Go-Kart 2024-25
           </h1>
         </div>

@@ -17,7 +17,7 @@ function ScissorLift() {
         <div
           style={{
             position: 'absolute',
-            bottom: '2rem',
+            bottom: '0.75rem',
             left: '2rem',
             color: 'white',
             textShadow: '0 2px 8px rgba(0,0,0,0.7)',
