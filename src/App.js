@@ -6,6 +6,7 @@ import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
+import ScrollToTop from './components/ScrollToTop';
 import AutonomousRCCar from "./pages/AutonomousRCCar";
 import ASMEGoKart from "./pages/ASMEGoKart";
 import RubiksCubeSolver from "./pages/RubiksCubeSolver";
@@ -24,6 +25,7 @@ import {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <NavBar />
         <Routes>
@@ -46,5 +48,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
