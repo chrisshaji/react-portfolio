@@ -1,5 +1,10 @@
 import React from 'react';
-// import image files later for production use
+
+import acrylic from '../assets/proj-img/acrylic_pic.jpg';
+import curr_exhibit from '../assets/proj-img/current_exhibit.jpg';
+import cutting_wood from '../assets/proj-img/cutting_wood.jpg';
+import old_exhibit from '../assets/proj-img/old_exhibit.jpg';
+import spray_paint from '../assets/proj-img/spray_paint_piece.jpg';
 
 function ChildrensMuseumExhibit() {
   return (

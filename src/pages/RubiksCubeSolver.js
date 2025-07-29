@@ -4,29 +4,46 @@ import baseplateprint from "../assets/proj-img/baseplateprint.jpg";
 import breadboarding from "../assets/proj-img/breadboarding.png";
 import motorinarch from "../assets/proj-img/motorinarch.jpg";
 import rubixcad from "../assets/proj-img/rubixcad.png";
+import heroimg from "../assets/img/project-img1.jpeg"; // ✅ fixed import path
 
 function RubiksCubeSolver() {
   const designImages = [
     { caption: "Breadboarding the motors", src: breadboarding },
     { caption: "Motor screwed into the arch", src: motorinarch },
-    { caption: "Assembly rendered in SolidWorks", src: rubixcad }];
-    const pimages = [
+    { caption: "Assembly rendered in SolidWorks", src: rubixcad }
+  ];
+
+  const pimages = [
     { caption: "Base Plate Print ~24 hour", src: baseplateprint },
-    { caption: "Failed due to poor adhesion :(", src: basefail }];
+    { caption: "Failed due to poor adhesion :(", src: basefail }
+  ];
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section with Blurred Background and Adjusted Scroll */}
       <div
         style={{
           position: 'relative',
           height: '60vh',
-          backgroundImage: `url(/placeholder-hero.jpg)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          overflow: 'hidden',
         }}
       >
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage: `url(${heroimg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center -200px', // shifts image up
+            backgroundRepeat: 'no-repeat',
+            filter: 'blur(2px)',
+            transform: 'scale(1.1)', // hide blur edge
+            zIndex: 1,
+          }}
+        />
         <div
           style={{
             position: 'absolute',
@@ -34,6 +51,7 @@ function RubiksCubeSolver() {
             left: '2rem',
             color: 'white',
             textShadow: '0 2px 8px rgba(0,0,0,0.7)',
+            zIndex: 2,
           }}
         >
           <h1 style={{ fontSize: '3rem', margin: 0, fontWeight: 'bold' }}>
@@ -42,57 +60,52 @@ function RubiksCubeSolver() {
         </div>
       </div>
 
+      {/* Main Content */}
       <div style={{ marginLeft: '5rem', marginRight: '5rem' }}>
         <h2 className="mt-5">Design Rationale</h2>
         <p>
-          The motor and cube connectors were the first pieces to be designed and fabricated. These pieces had to be toleranced perfectly 
-          — too loose and they'd slip, too tight and removal would be hard. After a lot of testing and printing, I arrived at the perfect 
-          dimensions for a smooth fit. Screw holes were added as a backup for wear and vibration.
+          The motor and cube connectors were the first pieces to be designed and fabricated. These pieces had to be toleranced perfectly — too loose and they'd slip, too tight and removal would be hard. After a lot of testing and printing, I arrived at the perfect dimensions for a smooth fit. Screw holes were added as a backup for wear and vibration.
         </p>
         <p>
-          The main design constraint was securely mounting each stepper motor to each cube face. The column pieces needed to support ~1 
-          lb motors during high-speed movement. Caliper measurements and 8–10% tolerance were used, plus a honeycomb design for ventilation.
-          Screw tabs were added for mounting.
+          The main design constraint was securely mounting each stepper motor to each cube face. The column pieces needed to support ~1 lb motors during high-speed movement. Caliper measurements and 8–10% tolerance were used, plus a honeycomb design for ventilation. Screw tabs were added for mounting.
         </p>
         <p>
-          For the base plate and arch, I minimized filament use by hollowing patterns. Originally I planned to use neodymium magnets for arch 
-          removal, but they weren’t strong enough — screws and nuts worked better. The base plate allowed the columns and bottom motor to screw
-          directly into place.
+          For the base plate and arch, I minimized filament use by hollowing patterns. Originally I planned to use neodymium magnets for arch removal, but they weren’t strong enough — screws and nuts worked better. The base plate allowed the columns and bottom motor to screw directly into place.
         </p>
 
-            <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        gap: '30px',
-        flexWrap: 'wrap',
-        marginTop: '2rem',
-      }}
-    >
-      {designImages.map((item, i) => (
-        <div key={i} style={{ textAlign: 'center' }}>
-          <img
-            src={item.src}
-            alt={item.caption}
-            style={{
-              height: '350px',
-              width: 'auto',
-              objectFit: 'cover',
-              borderRadius: '12px',
-              display: 'block',
-              margin: '0 auto',
-            }}
-          />
-          <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
+        {/* Design Images Row */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            gap: '30px',
+            flexWrap: 'wrap',
+            marginTop: '2rem',
+          }}
+        >
+          {designImages.map((item, i) => (
+            <div key={i} style={{ textAlign: 'center' }}>
+              <img
+                src={item.src}
+                alt={item.caption}
+                style={{
+                  height: '350px',
+                  width: 'auto',
+                  objectFit: 'cover',
+                  borderRadius: '12px',
+                  display: 'block',
+                  margin: '0 auto',
+                }}
+              />
+              <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
         <h2 className="mt-5">Fabrication</h2>
         <p>
-          The enclosure, connectors, and motor holders were fully 3D printed on my Elegoo Neptune 3 Pro using PLA and sliced with Cura. The base 
-          plate took up the entire build volume and was the trickiest print. My first attempt failed due to poor tree support adhesion.
+          The enclosure, connectors, and motor holders were fully 3D printed on my Elegoo Neptune 3 Pro using PLA and sliced with Cura. The base plate took up the entire build volume and was the trickiest print. My first attempt failed due to poor tree support adhesion.
         </p>
 
         <h4>Print Settings:</h4>
@@ -105,34 +118,33 @@ function RubiksCubeSolver() {
 
         {/* Fabrication Images Row */}
         <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        gap: '30px',
-        flexWrap: 'wrap',
-        marginTop: '2rem',
-      }}
-    >
-      {pimages.map((item, i) => (
-        <div key={i} style={{ textAlign: 'center' }}>
-          <img
-            src={item.src}
-            alt={item.caption}
-            style={{
-              height: '350px',
-              width: 'auto',
-              objectFit: 'cover',
-              borderRadius: '12px',
-              display: 'block',
-              margin: '0 auto',
-            }}
-          />
-          <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            gap: '30px',
+            flexWrap: 'wrap',
+            marginTop: '2rem',
+          }}
+        >
+          {pimages.map((item, i) => (
+            <div key={i} style={{ textAlign: 'center' }}>
+              <img
+                src={item.src}
+                alt={item.caption}
+                style={{
+                  height: '350px',
+                  width: 'auto',
+                  objectFit: 'cover',
+                  borderRadius: '12px',
+                  display: 'block',
+                  margin: '0 auto',
+                }}
+              />
+              <p style={{ fontStyle: 'italic', marginTop: '0.5rem' }}>{item.caption}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-
       </div>
     </div>
   );
